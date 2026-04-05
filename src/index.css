@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 32% 8%;
+    --foreground: 210 20% 96%;
+    --card: 222 28% 11%;
+    --card-foreground: 210 20% 96%;
+    --popover: 222 28% 11%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 84 100% 59%;
+    --primary-foreground: 220 32% 8%;
+    --secondary: 219 23% 18%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 221 23% 14%;
+    --muted-foreground: 215 12% 67%;
+    --accent: 188 88% 43%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 80% 61%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 21% 20%;
+    --input: 217 21% 20%;
+    --ring: 84 100% 59%;
+    --radius: 1.2rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    color-scheme: dark;
+    font-family: "Avenir Next", "IBM Plex Sans", "Segoe UI", sans-serif;
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 30px 30px, 30px 30px;
+    background-position: center, center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Avenir Next", "IBM Plex Sans", "Segoe UI", sans-serif;
+    letter-spacing: -0.035em;
+  }
+
+  ::selection {
+    background: rgba(199, 255, 75, 0.22);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
